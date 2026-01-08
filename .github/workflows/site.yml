@@ -21,3 +21,4 @@ jobs:
           github_token: ${{ secrets.GH_PAT }}
           publish_dir: ./site/status-page/__sapper__/export
           publish_branch: gh-pages
+          cname: status.log10x.com
