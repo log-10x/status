@@ -34,6 +34,32 @@ status-website:
       href: https://console.log10x.com
     - title: Documentation
       href: https://doc.log10x.com
+  css: |
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+    :root {
+      --background-primary: #01080f;
+      --background-secondary: #101519;
+      --background-tertiary: #151c22;
+      --text-primary: #ffffff;
+      --text-secondary: #b3b5b7;
+      --accent-green: #00ff41;
+      --accent-cyan: #00d9ff;
+      --brand-1: #5f6f83;
+      --brand-2: #48535f;
+      --error: #8b0000;
+    }
+    * { font-family: 'Ubuntu', sans-serif !important; }
+    body { background: var(--background-primary) !important; }
+    .dark { background: var(--background-primary) !important; }
+    h1, h2, h3 { color: var(--text-primary) !important; }
+    h1 strong { color: var(--accent-green) !important; }
+    .status-up { background: linear-gradient(135deg, #00ff41 0%, #00d9ff 100%) !important; }
+    .status-down { background: linear-gradient(135deg, #ff0066 0%, #8b0000 100%) !important; }
+    nav { background: var(--background-secondary) !important; border-bottom: 1px solid var(--brand-2) !important; }
+    a { color: var(--accent-cyan) !important; }
+    a:hover { color: var(--accent-green) !important; }
+    .card, article { background: var(--background-secondary) !important; border: 1px solid var(--brand-2) !important; border-radius: 8px !important; }
+    footer { background: var(--background-secondary) !important; border-top: 1px solid var(--brand-2) !important; }
 
 # Check frequency (in minutes)
 workflowSchedule:
