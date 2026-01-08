@@ -39,7 +39,7 @@ sites:
 
 # Status page customization
 status-website:
-  baseUrl: /status
+  baseUrl: /
   logoUrl: https://console.log10x.com/favicon.ico
   name: Log10x Status
   introTitle: "**Log10x** System Status"
