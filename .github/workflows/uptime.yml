@@ -6,6 +6,9 @@ on:
 jobs:
   uptime:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
     steps:
       - uses: actions/checkout@v4
       - uses: upptime/uptime-monitor@v1.41.0
