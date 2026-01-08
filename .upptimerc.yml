@@ -8,7 +8,6 @@ repo: status
 sites:
   - name: Console
     url: https://console.log10x.com
-    icon: https://console.log10x.com/favicon.ico
     maxResponseTime: 5000
 
   - name: API
@@ -23,34 +22,18 @@ sites:
       - 200
     maxResponseTime: 5000
 
-  - name: Documentation
-    url: https://docs.log10x.com
-    maxResponseTime: 5000
-
-  - name: Grafana
-    url: https://g-5c7f0baa8c.grafana-workspace.us-east-1.amazonaws.com/api/health
-    expectedStatusCodes:
-      - 200
-    maxResponseTime: 5000
-
-  - name: Demo
-    url: https://demo.log10x.com
-    maxResponseTime: 10000
-
 # Status page customization
 status-website:
   baseUrl: /
-  logoUrl: https://console.log10x.com/favicon.ico
   name: Log10x Status
   introTitle: "**Log10x** System Status"
-  introMessage: Current status of Log10x services. Subscribe to updates for incident notifications.
+  introMessage: Current status of Log10x services.
+  theme: dark
   navbar:
-    - title: Homepage
-      href: https://log10x.com
     - title: Console
       href: https://console.log10x.com
     - title: Documentation
-      href: https://docs.log10x.com
+      href: https://doc.log10x.com
 
 # Check frequency (in minutes)
 workflowSchedule:
