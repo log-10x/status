@@ -12,14 +12,14 @@ Public status page for Log10x services, powered by [Upptime](https://upptime.js.
 
 ## Monitored Services
 
-| Service | Description |
-|---------|-------------|
-| Console | Main web application at console.log10x.com |
-| API | Backend API at api.log10x.com |
-| Auth | Authentication service at auth.log10x.com |
-| Documentation | Product documentation at docs.log10x.com |
-| Grafana | Dashboards and analytics |
-| Demo | Demo environment |
+| Service       | Description                                |
+| ------------- | ------------------------------------------ |
+| Console       | Main web application at console.log10x.com |
+| API           | Backend API at api.log10x.com              |
+| Auth          | Authentication service at auth.log10x.com  |
+| Documentation | Product documentation at docs.log10x.com   |
+| Grafana       | Dashboards and analytics                   |
+| Demo          | Demo environment                           |
 
 ## Setup
 
