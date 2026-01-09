@@ -22,7 +22,7 @@ sites:
       - 200
     maxResponseTime: 3000
 
-  - name: Auth
+  - name: Identity
     url: https://auth.log10x.com/.well-known/openid-configuration
     expectedStatusCodes:
       - 200
@@ -38,8 +38,8 @@ sites:
 status-website:
   baseUrl: /
   name: Log10x Status
-  logoUrl: https://console.log10x.com/favicon.ico
-  favicon: https://console.log10x.com/favicon.ico
+  logoUrl: https://doc.log10x.com/assets/favicon.svg
+  favicon: https://doc.log10x.com/assets/favicon.svg
   introTitle: ""
   introMessage: ""
   theme: dark
@@ -73,6 +73,9 @@ status-website:
     .uptime-bar, .response-time { opacity: 0.7; }
     svg { max-width: 100%; }
     [class*="status"] span, .status-text { font-size: 0.8rem; }
+    nav img, nav svg, header img, header svg, .logo, [class*="logo"] { display: none !important; }
+    nav span, header span { display: none !important; }
+    footer a[href*="github"], footer a[href*="upptime"] { display: none !important; }
 
 # Check frequency (in minutes)
 workflowSchedule:
