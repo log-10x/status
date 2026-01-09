@@ -46,8 +46,8 @@ status-website:
   navbar:
     - title: Console
       href: https://console.log10x.com
-    - title: Documentation
-      href: https://doc.log10x.com
+    - title: Docs
+      href: https://doc.log10x.com/console/status/
   css: |
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
     :root { --bg: #01080f; --bg2: #101519; --bg3: #151c22; --border: #272d33; --text: #cacaca; --text2: #91919c; --white: #fff; --green: #4ade80; }
