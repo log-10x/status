@@ -36,10 +36,10 @@
     "dailyMinutesDown": {}
   },
   {
-    "name": "Auth",
-    "url": "https://auth.log10x.com/.well-known/openid-configuration",
-    "icon": "https://icons.duckduckgo.com/ip3/auth.log10x.com.ico",
-    "slug": "auth",
+    "name": "Metrics",
+    "url": "https://prometheus.log10x.com/health",
+    "icon": "https://icons.duckduckgo.com/ip3/prometheus.log10x.com.ico",
+    "slug": "metrics",
     "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
@@ -52,5 +52,43 @@
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {}
+  },
+  {
+    "name": "Identity",
+    "url": "https://auth.log10x.com/.well-known/openid-configuration",
+    "icon": "https://icons.duckduckgo.com/ip3/auth.log10x.com.ico",
+    "slug": "identity",
+    "status": "down",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 0,
+    "timeDay": 0,
+    "timeWeek": 0,
+    "timeMonth": 0,
+    "timeYear": 0,
+    "dailyMinutesDown": {}
+  },
+  {
+    "name": "Grafana",
+    "url": "https://g-3fb6644a79.grafana-workspace.us-east-1.amazonaws.com/api/health",
+    "icon": "https://icons.duckduckgo.com/ip3/g-3fb6644a79.grafana-workspace.us-east-1.amazonaws.com.ico",
+    "slug": "grafana",
+    "status": "down",
+    "uptime": "86.29%",
+    "uptimeDay": "86.29%",
+    "uptimeWeek": "86.29%",
+    "uptimeMonth": "86.29%",
+    "uptimeYear": "86.29%",
+    "time": 0,
+    "timeDay": 0,
+    "timeWeek": 0,
+    "timeMonth": 0,
+    "timeYear": 0,
+    "dailyMinutesDown": {
+      "2026-01-08": 28
+    }
   }
 ]
