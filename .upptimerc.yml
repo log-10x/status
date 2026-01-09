@@ -16,8 +16,20 @@ sites:
       - 200
     maxResponseTime: 3000
 
+  - name: Metrics
+    url: https://prometheus.log10x.com/health
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 3000
+
   - name: Auth
     url: https://auth.log10x.com/.well-known/openid-configuration
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+
+  - name: Grafana
+    url: https://g-3fb6644a79.grafana-workspace.us-east-1.amazonaws.com/api/health
     expectedStatusCodes:
       - 200
     maxResponseTime: 5000
