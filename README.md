@@ -1,11 +1,5 @@
 # Log10x Status Page
 
-[![Uptime CI](https://github.com/l1x-co/status/workflows/Uptime%20CI/badge.svg)](https://github.com/l1x-co/status/actions?query=workflow%3A%22Uptime+CI%22)
-[![Response Time CI](https://github.com/l1x-co/status/workflows/Response%20Time%20CI/badge.svg)](https://github.com/l1x-co/status/actions?query=workflow%3A%22Response+Time+CI%22)
-[![Graphs CI](https://github.com/l1x-co/status/workflows/Graphs%20CI/badge.svg)](https://github.com/l1x-co/status/actions?query=workflow%3A%22Graphs+CI%22)
-[![Static Site CI](https://github.com/l1x-co/status/workflows/Static%20Site%20CI/badge.svg)](https://github.com/l1x-co/status/actions?query=workflow%3A%22Static+Site+CI%22)
-[![Summary CI](https://github.com/l1x-co/status/workflows/Summary%20CI/badge.svg)](https://github.com/l1x-co/status/actions?query=workflow%3A%22Summary+CI%22)
-
 Public status page for Log10x services, powered by [Upptime](https://upptime.js.org).
 
 **Live Status:** [status.log10x.com](https://status.log10x.com)
@@ -32,7 +26,7 @@ This repository uses GitHub Actions for automated monitoring:
 
 ### DNS Configuration
 
-Add a CNAME record pointing `status.log10x.com` to `l1x-co.github.io`.
+Add a CNAME record pointing `status.log10x.com` to `log-10x.github.io`.
 
 ### Repository Settings
 
