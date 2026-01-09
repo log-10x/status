@@ -40,13 +40,14 @@ status-website:
     * { font-family: Ubuntu, Helvetica, sans-serif !important; -webkit-font-smoothing: antialiased; box-sizing: border-box; }
     body, .dark { background: var(--bg) !important; color: var(--text) !important; }
     main { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
-    main::before { content: 'log10x'; display: block; font-size: 1.75rem; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.5px; }
     h1, h2.intro, .intro { display: none !important; }
     h3 { font-size: 0.75rem !important; font-weight: 500 !important; color: var(--text2) !important; text-transform: uppercase; letter-spacing: 0.5px; margin: 32px 0 16px !important; }
     h3:first-of-type { margin-top: 0 !important; }
-    nav { background: var(--bg2) !important; border-bottom: 1px solid var(--border) !important; padding: 12px 24px !important; }
+    nav { background: var(--bg2) !important; border-bottom: 1px solid var(--border) !important; padding: 16px 24px !important; display: flex !important; align-items: center !important; gap: 24px !important; }
+    nav::before { content: 'log10x'; font-size: 1.25rem; font-weight: 700; color: var(--white); letter-spacing: 0.5px; margin-right: auto; }
     nav a { color: var(--text) !important; font-size: 0.875rem !important; text-decoration: none !important; }
     nav a:hover { color: var(--white) !important; }
+    nav a:first-of-type { margin-left: auto; }
     a { color: var(--text) !important; text-decoration: none !important; }
     a:hover { color: var(--white) !important; }
     article, .card { background: var(--bg2) !important; border: 1px solid var(--border) !important; border-radius: 8px !important; padding: 16px 20px !important; margin-bottom: 8px !important; }
