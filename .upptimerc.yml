@@ -38,6 +38,8 @@ sites:
 status-website:
   baseUrl: /
   name: Log10x Status
+  logoUrl: https://console.log10x.com/favicon.ico
+  favicon: https://console.log10x.com/favicon.ico
   introTitle: ""
   introMessage: ""
   theme: dark
