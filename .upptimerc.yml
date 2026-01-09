@@ -76,6 +76,7 @@ status-website:
     nav img, nav svg, header img, header svg, .logo, [class*="logo"] { display: none !important; }
     nav span, header span { display: none !important; }
     footer a[href*="github"], footer a[href*="upptime"] { display: none !important; }
+    article img, .card img, [class*="favicon"], .site-icon { display: none !important; }
 
 # Check frequency (in minutes)
 workflowSchedule:
