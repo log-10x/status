@@ -26,8 +26,9 @@ sites:
 status-website:
   baseUrl: /
   name: Log10x Status
-  introTitle: "**Log10x** Status"
-  introMessage: Real-time system health and uptime.
+  logoUrl: https://log10x.com/images/Logo.png
+  introTitle: "System Status"
+  introMessage: Real-time health monitoring for Log10x services.
   theme: dark
   navbar:
     - title: Console
@@ -36,27 +37,32 @@ status-website:
       href: https://doc.log10x.com
   css: |
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-    :root { --bg: #01080f; --bg2: #101519; --bg3: #151c22; --border: #272d33; --text: #cacaca; --text2: #91919c; --white: #fff; }
+    :root { --bg: #01080f; --bg2: #101519; --bg3: #151c22; --border: #272d33; --text: #cacaca; --text2: #91919c; --white: #fff; --green: #4ade80; }
     * { font-family: Ubuntu, Helvetica, sans-serif !important; -webkit-font-smoothing: antialiased; box-sizing: border-box; }
     body, .dark { background: var(--bg) !important; color: var(--text) !important; }
     main { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
-    h1 { font-weight: 400 !important; font-size: 1.75rem !important; color: var(--white) !important; margin: 0 0 4px !important; }
-    h1 strong { font-weight: 400 !important; }
+    h1 { font-weight: 700 !important; font-size: 1.5rem !important; color: var(--white) !important; margin: 0 0 4px !important; letter-spacing: 0.5px; }
+    h1 strong { font-weight: 700 !important; color: var(--green) !important; }
     h2, .intro { font-size: 0.95rem !important; color: var(--text2) !important; font-weight: 400 !important; margin: 0 0 32px !important; }
-    h3 { font-size: 0.8rem !important; font-weight: 500 !important; color: var(--text2) !important; text-transform: uppercase; letter-spacing: 0.5px; margin: 40px 0 16px !important; }
+    h3 { font-size: 0.75rem !important; font-weight: 500 !important; color: var(--text2) !important; text-transform: uppercase; letter-spacing: 0.5px; margin: 40px 0 16px !important; }
     nav { background: var(--bg2) !important; border-bottom: 1px solid var(--border) !important; padding: 12px 24px !important; }
     nav a { color: var(--text) !important; font-size: 0.875rem !important; text-decoration: none !important; }
     nav a:hover { color: var(--white) !important; }
     a { color: var(--text) !important; text-decoration: none !important; }
     a:hover { color: var(--white) !important; }
     article, .card { background: var(--bg2) !important; border: 1px solid var(--border) !important; border-radius: 8px !important; padding: 16px 20px !important; margin-bottom: 8px !important; }
-    article:hover, .card:hover { border-color: #34393f !important; }
+    article:hover, .card:hover { border-color: #3a4149 !important; }
     div[class*="status"], section { background: transparent !important; border: none !important; }
     footer { background: transparent !important; border-top: 1px solid var(--border) !important; padding: 32px 0 !important; margin-top: 48px; }
     footer, footer * { color: var(--text2) !important; font-size: 0.8rem !important; }
     p { color: var(--text); font-size: 0.9rem; line-height: 1.5; margin: 4px 0; }
-    .status-up, [class*="operational"] { background: var(--bg2) !important; border-color: var(--border) !important; }
-    .status-down { background: var(--bg2) !important; border-color: #5f3f3f !important; }
+    .status-up, [class*="operational"], article.up { background: var(--bg2) !important; border: 1px solid var(--border) !important; }
+    .status-down, article.down { background: rgba(239, 68, 68, 0.05) !important; border: 1px solid rgba(239, 68, 68, 0.3) !important; }
+    [class*="degraded"] { background: rgba(245, 158, 11, 0.05) !important; border: 1px solid rgba(245, 158, 11, 0.3) !important; }
+    .uptime-bar, .response-time { opacity: 0.7; }
+    svg { max-width: 100%; }
+    [class*="status"] span, .status-text { font-size: 0.8rem; }
+    article *, .card * { border-left: none !important; }
 
 # Check frequency (in minutes)
 workflowSchedule:
