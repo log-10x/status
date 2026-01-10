@@ -77,18 +77,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/g-3fb6644a79.grafana-workspace.us-east-1.amazonaws.com.ico",
     "slug": "grafana",
     "status": "down",
-    "uptime": "86.29%",
-    "uptimeDay": "86.29%",
-    "uptimeWeek": "86.29%",
-    "uptimeMonth": "86.29%",
-    "uptimeYear": "86.29%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 0,
     "timeDay": 0,
     "timeWeek": 0,
     "timeMonth": 0,
     "timeYear": 0,
-    "dailyMinutesDown": {
-      "2026-01-08": 28
-    }
+    "dailyMinutesDown": {}
   }
 ]
