@@ -1,7 +1,7 @@
 url: https://auth.log10x.com/.well-known/openid-configuration
 status: up
 code: 200
-responseTime: 268
-lastUpdated: 2026-01-29T23:07:19.408Z
+responseTime: 204
+lastUpdated: 2026-01-30T23:07:30.233Z
 startTime: 2026-01-09T02:19:34.751Z
 generator: Upptime <https://github.com/upptime/upptime>
