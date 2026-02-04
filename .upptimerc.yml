@@ -132,7 +132,7 @@ workflowSchedule:
 i18n:
   activeIncidents: Active Incidents
   allSystemsOperational: All Systems Operational
-  incidentReport: "Incident Report for {DATE}"
+  incidentReport: "Incident #$NUMBER Report"
   pastIncidents: Past Incidents
   scheduledMaintenance: Scheduled Maintenance
   footer: "Powered by [Upptime](https://upptime.js.org)"

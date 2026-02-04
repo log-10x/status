@@ -16,3 +16,4 @@ jobs:
           command: update
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
+          DEMO_API_KEY: ${{ secrets.DEMO_API_KEY }}
