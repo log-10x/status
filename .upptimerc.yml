@@ -34,6 +34,47 @@ sites:
       - 200
     maxResponseTime: 5000
 
+  # Demo Environment Health Checks
+  - name: Demo Cloud Reporter
+    url: https://api.log10x.com/internal/v1/demo/health/cloud/reporter
+    headers:
+      - "X-10X-Auth: $DEMO_API_KEY"
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 10000
+
+  - name: Demo Edge Optimizer
+    url: https://api.log10x.com/internal/v1/demo/health/edge/optimizer
+    headers:
+      - "X-10X-Auth: $DEMO_API_KEY"
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 10000
+
+  - name: Demo Cloud Streamer Index
+    url: https://api.log10x.com/internal/v1/demo/health/cloud/streamer/index
+    headers:
+      - "X-10X-Auth: $DEMO_API_KEY"
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 10000
+
+  - name: Demo Cloud Streamer Query
+    url: https://api.log10x.com/internal/v1/demo/health/cloud/streamer/query
+    headers:
+      - "X-10X-Auth: $DEMO_API_KEY"
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 10000
+
+  - name: Demo Cloud Streamer Stream
+    url: https://api.log10x.com/internal/v1/demo/health/cloud/streamer/stream
+    headers:
+      - "X-10X-Auth: $DEMO_API_KEY"
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 10000
+
 # Status page customization
 status-website:
   baseUrl: /
