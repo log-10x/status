@@ -103,18 +103,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/console.log10x.com.ico",
     "slug": "console-e2-e",
     "status": "down",
-    "uptime": "98.76%",
-    "uptimeDay": "98.76%",
-    "uptimeWeek": "98.76%",
-    "uptimeMonth": "98.76%",
-    "uptimeYear": "98.76%",
+    "uptime": "36.50%",
+    "uptimeDay": "36.50%",
+    "uptimeWeek": "36.50%",
+    "uptimeMonth": "36.50%",
+    "uptimeYear": "36.50%",
     "time": 0,
     "timeDay": 0,
     "timeWeek": 0,
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
-      "2026-03-14": 0
+      "2026-03-14": 30
     }
   },
   {
