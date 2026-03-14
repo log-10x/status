@@ -34,6 +34,13 @@ sites:
       - 200
     maxResponseTime: 5000
 
+  - name: Console E2E
+    url: https://console.log10x.com/status/heartbeat.json
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+    __dangerous__body_down_if_text_missing: '"status": "healthy"'
+
   # Demo Environment Health Checks
   - name: Demo Cloud Reporter
     url: https://api.log10x.com/internal/v1/demo/health/cloud/reporter
