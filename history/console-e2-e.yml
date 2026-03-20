@@ -1,7 +1,7 @@
 url: https://console.log10x.com/status/heartbeat.json
-status: up
+status: down
 code: 200
-responseTime: 157
-lastUpdated: 2026-03-20T05:47:41.884Z
+responseTime: 169
+lastUpdated: 2026-03-20T09:25:34.121Z
 startTime: 2026-03-14T18:57:42.689Z
 generator: Upptime <https://github.com/upptime/upptime>
