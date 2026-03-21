@@ -103,11 +103,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/console.log10x.com.ico",
     "slug": "console-e2-e",
     "status": "down",
-    "uptime": "91.07%",
-    "uptimeDay": "88.97%",
-    "uptimeWeek": "91.07%",
-    "uptimeMonth": "91.07%",
-    "uptimeYear": "91.07%",
+    "uptime": "91.30%",
+    "uptimeDay": "90.61%",
+    "uptimeWeek": "91.30%",
+    "uptimeMonth": "91.30%",
+    "uptimeYear": "91.30%",
     "time": 0,
     "timeDay": 0,
     "timeWeek": 0,
@@ -131,7 +131,7 @@
     "slug": "demo-cloud-reporter",
     "status": "down",
     "uptime": "99.93%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.94%",
     "uptimeYear": "99.93%",
@@ -141,6 +141,7 @@
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
+      "2026-03-21": 0,
       "2026-02-24": 28,
       "2026-02-04": 17
     }
@@ -152,7 +153,7 @@
     "slug": "demo-edge-optimizer",
     "status": "down",
     "uptime": "99.97%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
@@ -162,6 +163,7 @@
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
+      "2026-03-21": 0,
       "2026-02-04": 17
     }
   },
@@ -172,7 +174,7 @@
     "slug": "demo-storage-streamer-index",
     "status": "down",
     "uptime": "99.85%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.85%",
     "uptimeYear": "99.85%",
@@ -182,6 +184,7 @@
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
+      "2026-03-21": 0,
       "2026-03-11": 24,
       "2026-02-24": 28
     }
@@ -193,7 +196,7 @@
     "slug": "demo-storage-streamer-query",
     "status": "down",
     "uptime": "99.92%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.92%",
     "uptimeYear": "99.92%",
@@ -203,6 +206,7 @@
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
+      "2026-03-21": 0,
       "2026-02-24": 28
     }
   },
@@ -213,7 +217,7 @@
     "slug": "demo-storage-streamer-stream",
     "status": "down",
     "uptime": "99.92%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.92%",
     "uptimeYear": "99.92%",
@@ -223,6 +227,7 @@
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
+      "2026-03-21": 0,
       "2026-02-24": 28
     }
   }
