@@ -1,7 +1,7 @@
 url: https://api.log10x.com/internal/v1/demo/health/edge/optimizer
-status: up
-code: 200
-responseTime: 126
-lastUpdated: 2026-04-11T10:21:21.743Z
+status: down
+code: 503
+responseTime: 101
+lastUpdated: 2026-04-11T11:16:26.602Z
 startTime: 2026-02-04T22:22:56.296Z
 generator: Upptime <https://github.com/upptime/upptime>
