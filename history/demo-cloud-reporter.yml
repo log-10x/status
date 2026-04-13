@@ -1,7 +1,7 @@
 url: https://api.log10x.com/internal/v1/demo/health/cloud/reporter
-status: down
-code: 503
-responseTime: 7541
-lastUpdated: 2026-04-13T21:03:34.976Z
+status: up
+code: 200
+responseTime: 6971
+lastUpdated: 2026-04-13T21:27:08.649Z
 startTime: 2026-02-04T22:22:54.017Z
 generator: Upptime <https://github.com/upptime/upptime>
