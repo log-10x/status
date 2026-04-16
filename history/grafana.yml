@@ -1,7 +1,7 @@
 url: https://g-3fb6644a79.grafana-workspace.us-east-1.amazonaws.com/api/health
 status: down
 code: 400
-responseTime: 324
-lastUpdated: 2026-04-15T23:17:33.252Z
+responseTime: 179
+lastUpdated: 2026-04-16T23:15:52.457Z
 startTime: 2026-01-08T22:54:47.305Z
 generator: Upptime <https://github.com/upptime/upptime>
