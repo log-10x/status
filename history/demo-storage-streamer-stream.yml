@@ -1,7 +1,7 @@
 url: https://api.log10x.com/internal/v1/demo/health/cloud/streamer/stream
-status: up
-code: 200
-responseTime: 140
-lastUpdated: 2026-04-26T18:54:52.644Z
+status: down
+code: 503
+responseTime: 116
+lastUpdated: 2026-04-26T19:43:53.300Z
 startTime: 2026-02-24T14:05:01.286Z
 generator: Upptime <https://github.com/upptime/upptime>
