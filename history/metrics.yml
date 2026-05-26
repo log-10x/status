@@ -1,7 +1,7 @@
 url: https://prometheus.log10x.com/health
 status: up
 code: 200
-responseTime: 170
-lastUpdated: 2026-05-25T23:25:36.766Z
+responseTime: 152
+lastUpdated: 2026-05-26T23:26:11.399Z
 startTime: 2026-01-09T02:19:33.979Z
 generator: Upptime <https://github.com/upptime/upptime>
