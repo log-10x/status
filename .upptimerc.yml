@@ -5,11 +5,22 @@ owner: log-10x
 repo: status
 
 # Service monitors
+#
+# Check map (2026-07-05 overhaul) — every check probes something that exists
+# today; the old demo streamer/reporter checks tested components retired with
+# the demo EKS cluster (destroyed 2026-06-30).
 sites:
+  # Customer-facing surfaces
   - name: Console
     url: https://console.log10x.com
     maxResponseTime: 5000
 
+  - name: Website
+    url: https://www.log10x.com
+    maxResponseTime: 5000
+
+  # API gateway liveness (api + prometheus domains route to the same gateway;
+  # two checks keep per-domain routing covered)
   - name: API
     url: https://api.log10x.com/health
     expectedStatusCodes:
@@ -28,12 +39,34 @@ sites:
       - 200
     maxResponseTime: 5000
 
+  # Prod workspace (g-e683d93d26). AMG rejects unauthenticated /api/health
+  # with 400, so /login is the deepest unauthenticated probe available.
   - name: Grafana
-    url: https://g-3fb6644a79.grafana-workspace.us-east-1.amazonaws.com/api/health
+    url: https://g-e683d93d26.grafana-workspace.us-east-1.amazonaws.com/login
     expectedStatusCodes:
       - 200
     maxResponseTime: 5000
 
+  # Public demo MCP (mcp.log10x.com, ECS behind ALB). Body is compact JSON.
+  - name: MCP
+    url: https://mcp.log10x.com/health
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+    __dangerous__body_down_if_text_missing: '"status":"ok"'
+
+  # Anonymous demo-license mint — exercises the license lambda + KMS signing
+  # path that every new install and demo quick-start depends on.
+  - name: Licensing
+    url: https://api.log10x.com/api/v1/license/demo
+    method: POST
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 10000
+    __dangerous__body_down_if_text_missing: 'license'
+
+  # Synthetic browser-free E2E (tenx-e2e-heartbeat lambda, refreshed every
+  # 30 min): console serves, demo metrics queryable, demo logs fresh.
   - name: Console E2E
     url: https://console.log10x.com/status/heartbeat.json
     expectedStatusCodes:
@@ -41,41 +74,11 @@ sites:
     maxResponseTime: 5000
     __dangerous__body_down_if_text_missing: '"status": "healthy"'
 
-  # Demo Environment Health Checks
-  - name: Demo Cloud Reporter
-    url: https://api.log10x.com/internal/v1/demo/health/cloud/reporter
-    headers:
-      - "X-10X-Auth: $DEMO_API_KEY"
-    expectedStatusCodes:
-      - 200
-    maxResponseTime: 10000
-
-  - name: Demo Edge Optimizer
-    url: https://api.log10x.com/internal/v1/demo/health/edge/optimizer
-    headers:
-      - "X-10X-Auth: $DEMO_API_KEY"
-    expectedStatusCodes:
-      - 200
-    maxResponseTime: 10000
-
-  - name: Demo Storage Streamer Index
-    url: https://api.log10x.com/internal/v1/demo/health/cloud/streamer/index
-    headers:
-      - "X-10X-Auth: $DEMO_API_KEY"
-    expectedStatusCodes:
-      - 200
-    maxResponseTime: 10000
-
-  - name: Demo Storage Streamer Query
-    url: https://api.log10x.com/internal/v1/demo/health/cloud/streamer/query
-    headers:
-      - "X-10X-Auth: $DEMO_API_KEY"
-    expectedStatusCodes:
-      - 200
-    maxResponseTime: 10000
-
-  - name: Demo Storage Streamer Stream
-    url: https://api.log10x.com/internal/v1/demo/health/cloud/streamer/stream
+  # Demo data freshness: gateway -> authorizer -> demo-health lambda -> AMP.
+  # 200 only while the demo replay keeps stamping tenx_pipeline_up for the
+  # demo tenant (edge/receiver is the one live pipeline post-teardown).
+  - name: Demo Pipeline
+    url: https://api.log10x.com/internal/v1/demo/health/edge/receiver
     headers:
       - "X-10X-Auth: $DEMO_API_KEY"
     expectedStatusCodes:
