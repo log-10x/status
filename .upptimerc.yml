@@ -99,6 +99,20 @@ sites:
       - 200
     maxResponseTime: 10000
 
+  # Deep retriever check: the demo-retriever-probe Lambda submits a REAL query
+  # every 15 min and asserts results come back, writing this heartbeat. Catches
+  # query-path breakage the metric check above can't see (broken stream worker,
+  # results not written, body-field regressions). Body must read "healthy" ->
+  # "degraded" (query ran, no results) and "down" (query dropped) both flag red.
+  # NOTE: this reads a file, so a STALLED probe would leave it falsely healthy;
+  # the l1x-demo-retriever-probe-stalled CloudWatch alarm covers that blind spot.
+  - name: Demo Retriever E2E
+    url: https://console.log10x.com/status/retriever-heartbeat.json
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+    __dangerous__body_down_if_text_missing: '"status": "healthy"'
+
 # Status page customization
 status-website:
   baseUrl: /
