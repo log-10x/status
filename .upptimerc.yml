@@ -85,6 +85,20 @@ sites:
       - 200
     maxResponseTime: 10000
 
+  # Demo Retriever liveness: same demo-health route, cloud/retriever app.
+  # 200 while the Lambda retriever emits tenx_pipeline_up (a real metric, one
+  # per feeder-triggered index run, ~5 min cadence). This series was ABSENT
+  # during the Jun30-Jul5 teardown, so this is precisely the check that was
+  # missing then. Metric-level: confirms the stack is indexing, not that
+  # queries return results (a synthetic query probe is the deeper follow-up).
+  - name: Demo Retriever
+    url: https://api.log10x.com/internal/v1/demo/health/cloud/retriever
+    headers:
+      - "X-10X-Auth: $DEMO_API_KEY"
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 10000
+
 # Status page customization
 status-website:
   baseUrl: /
