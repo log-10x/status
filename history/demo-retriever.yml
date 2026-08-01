@@ -1,7 +1,7 @@
 url: https://api.log10x.com/internal/v1/demo/health/cloud/retriever
-status: up
-code: 200
-responseTime: 154
-lastUpdated: 2026-08-01T14:25:30.009Z
+status: down
+code: 503
+responseTime: 413
+lastUpdated: 2026-08-01T14:50:57.247Z
 startTime: 2026-07-05T20:29:36.452Z
 generator: Upptime <https://github.com/upptime/upptime>
