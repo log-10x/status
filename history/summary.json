@@ -404,7 +404,7 @@
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
-      "2026-08-07": 47,
+      "2026-08-07": 56,
       "2026-08-06": 1440,
       "2026-08-05": 1440,
       "2026-08-04": 1440,
@@ -445,11 +445,11 @@
     "url": "https://api.log10x.com/internal/v1/demo/health/cloud/retriever",
     "icon": "https://icons.duckduckgo.com/ip3/api.log10x.com.ico",
     "slug": "demo-retriever",
-    "status": "down",
+    "status": "up",
     "uptime": "35.48%",
-    "uptimeDay": "44.18%",
-    "uptimeWeek": "52.10%",
-    "uptimeMonth": "31.75%",
+    "uptimeDay": "43.55%",
+    "uptimeWeek": "52.01%",
+    "uptimeMonth": "31.73%",
     "uptimeYear": "35.48%",
     "time": 0,
     "timeDay": 0,
@@ -483,7 +483,7 @@
       "2026-08-04": 918,
       "2026-08-05": 822,
       "2026-08-06": 830,
-      "2026-08-07": 0
+      "2026-08-07": 9
     }
   },
   {
