@@ -1,7 +1,7 @@
 url: https://api.log10x.com/internal/v1/demo/health/edge/receiver
 status: up
 code: 200
-responseTime: 7680
-lastUpdated: 2026-08-07T00:46:25.411Z
+responseTime: 7144
+lastUpdated: 2026-08-07T23:11:59.799Z
 startTime: 2026-07-05T16:20:49.339Z
 generator: Upptime <https://github.com/upptime/upptime>
