@@ -10,25 +10,17 @@ repo: status
 # today; the old demo streamer/reporter checks tested components retired with
 # the demo EKS cluster (destroyed 2026-06-30).
 sites:
-  # Customer-facing surfaces
-  - name: Console
-    url: https://console.log10x.com
-    maxResponseTime: 5000
+  # What a customer can be blocked by: obtaining a licence at install or
+  # purchase. A running engine verifies its licence locally and the built-in
+  # evaluation licence works offline, so nothing here can affect a deployed
+  # pipeline. Everything else log10x runs is alarmed internally
+  # (l1x-console-5xx-high, l1x-dotcom-5xx-high, l1x-api-5xx-high for the
+  # shared gateway that also serves prometheus.log10x.com, and
+  # l1x-mcp-no-healthy-hosts) rather than published here: a public red mark
+  # for a service no customer depends on costs trust without buying any.
 
-  - name: Website
-    url: https://www.log10x.com
-    maxResponseTime: 5000
-
-  # API gateway liveness (api + prometheus domains route to the same gateway;
-  # two checks keep per-domain routing covered)
   - name: API
     url: https://api.log10x.com/health
-    expectedStatusCodes:
-      - 200
-    maxResponseTime: 3000
-
-  - name: Metrics
-    url: https://prometheus.log10x.com/health
     expectedStatusCodes:
       - 200
     maxResponseTime: 3000
@@ -41,22 +33,7 @@ sites:
 
   # Prod workspace (g-e683d93d26). AMG rejects unauthenticated /api/health
   # with 400, so /login is the deepest unauthenticated probe available.
-  - name: Grafana
-    url: https://g-e683d93d26.grafana-workspace.us-east-1.amazonaws.com/login
-    expectedStatusCodes:
-      - 200
-    maxResponseTime: 5000
 
-  # Public demo MCP (mcp.log10x.com, ECS behind ALB). Body is compact JSON.
-  - name: MCP
-    url: https://mcp.log10x.com/health
-    expectedStatusCodes:
-      - 200
-    maxResponseTime: 5000
-    __dangerous__body_down_if_text_missing: '"status":"ok"'
-
-  # Anonymous demo-license mint — exercises the license lambda + KMS signing
-  # path that every new install and demo quick-start depends on.
   - name: Licensing
     url: https://api.log10x.com/api/v1/license/demo
     method: POST
@@ -67,25 +44,19 @@ sites:
 
   # Synthetic browser-free E2E (tenx-e2e-heartbeat lambda, refreshed every
   # 30 min): console serves, demo metrics queryable, demo logs fresh.
-  - name: Console E2E
-    url: https://console.log10x.com/status/heartbeat.json
-    expectedStatusCodes:
-      - 200
-    maxResponseTime: 5000
-    __dangerous__body_down_if_text_missing: '"status": "healthy"'
 
 # Status page customization
 status-website:
   baseUrl: /
-  name: Log10x Status
+  name: Log10x Licensing Status
   logoUrl: https://doc.log10x.com/assets/favicon.svg
   favicon: https://doc.log10x.com/assets/favicon.svg
-  introTitle: ""
-  introMessage: ""
+  introTitle: "Licensing and activation"
+  introMessage: "The endpoints an install or purchase needs to obtain a licence. A running 10x Engine verifies its licence locally and never calls these, so a deployed pipeline is unaffected by anything on this page."
   theme: dark
   navbar:
-    - title: Console
-      href: https://console.log10x.com
+    - title: Licensing
+      href: https://doc.log10x.com/manage/license/
     - title: Docs
       href: https://doc.log10x.com/manage/status/
   css: |
