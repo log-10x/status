@@ -31,6 +31,26 @@ sites:
       - 200
     maxResponseTime: 5000
 
+  # The console is the ONLY surface the Terms of Service attach an uptime
+  # commitment to: 99.5% monthly, with a tiered service-credit schedule. Until
+  # 2026-09-07 nothing measured it. The API, Identity and Licensing checks above
+  # are all necessary and none of them is the console — a customer can be unable
+  # to load the console while all three stay green.
+  #
+  # A commitment with a credit schedule behind it and no measurement behind THAT
+  # is not a commitment anyone can honour or dispute. SOC 2 deficiency D-55.
+  #
+  # CloudFront, so a 200 on / is the page being served. maxResponseTime is
+  # deliberately generous: this measures availability, and turning a slow-but-
+  # working page into a red mark would make the number mean something other than
+  # what the Terms promise.
+
+  - name: Console
+    url: https://console.log10x.com/
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+
   # Prod workspace (g-e683d93d26). AMG rejects unauthenticated /api/health
   # with 400, so /login is the deepest unauthenticated probe available.
 
