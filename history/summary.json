@@ -42,6 +42,26 @@
     }
   },
   {
+    "name": "Console",
+    "url": "https://console.log10x.com/",
+    "icon": "https://icons.duckduckgo.com/ip3/console.log10x.com.ico",
+    "slug": "console",
+    "status": "up",
+    "uptime": "0.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "0.00%",
+    "time": 0,
+    "timeDay": 0,
+    "timeWeek": 0,
+    "timeMonth": 0,
+    "timeYear": 0,
+    "dailyMinutesDown": {
+      "2026-01-22": 21
+    }
+  },
+  {
     "name": "Licensing",
     "url": "https://api.log10x.com/api/v1/license/demo",
     "icon": "https://icons.duckduckgo.com/ip3/api.log10x.com.ico",
